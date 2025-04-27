@@ -1,22 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: laanikid <laanikid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/25 16:46:39 by laanikid          #+#    #+#             */
-/*   Updated: 2025/04/25 16:48:30 by laanikid         ###   ########.fr       */
+/*   Created: 2025/04/27 03:15:12 by laanikid          #+#    #+#             */
+/*   Updated: 2025/04/27 03:16:59 by laanikid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <unistd.h>
 
-void	ft_bzero(void *s, size_t n)
+void	ft_putchar_fd(char c, int fd)
 {
-	unsigned char	*c;
-
-	c = (unsigned char *)s;
-	while (n--)
-		*c++ = 0;
+	write(fd, &c, 1);
 }

@@ -1,11 +1,8 @@
 NAME        = libft.a
 CC          = cc
-CPP            = c++
 CFLAGS      = -Wall -Wextra -Werror -O3
 SRCS        = $(shell find . -type f -name '*.c')
-TEST_SRCS    = $(shell find . -type f -name '*.cpp')
 OBJS        = $(SRCS:%.c=%.o)
-TEST_OBJS    = $(TEST_SRCS:%.cpp=%.o)
 INCLUDES    = -I.
 HEADER      = libft.h
 
@@ -28,16 +25,6 @@ $(NAME): $(OBJS)
 %.o: %.c $(HEADER)
 	@printf "$(BLUE)%12s$(RESET): $(MAGENTA)Compiling$(RESET) $<\n" $(NAME)
 	@$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
-
-%.o: %.cpp $(HEADER)
-	@printf "$(BLUE)%12s$(RESET): $(MAGENTA)Compiling$(RESET) $<\n" $(NAME)
-	@$(CPP) $(INCLUDES) -c $< -o $@
-
-test: $(OBJS) $(TEST_OBJS) $(HEADER)
-	@$(CPP) $(TEST_OBJS) $(OBJS) -o test
-	@printf "$(BOLD)$(BLUE)%12s$(RESET): $(CYAN)Running$(RESET) $(NAME)\n" $(NAME)
-	@./test
-	@rm test
 
 clean:
 	@printf "$(BOLD)$(BLUE)%12s$(RESET): $(RED)Removing$(RESET) object files\n" $(NAME)

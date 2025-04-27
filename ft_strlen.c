@@ -1,22 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: laanikid <laanikid@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lotfi </var/spool/mail/lotfi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/25 16:46:39 by laanikid          #+#    #+#             */
-/*   Updated: 2025/04/25 16:48:30 by laanikid         ###   ########.fr       */
+/*   Created: 2025/04/25 11:58:17 by lotfi             #+#    #+#             */
+/*   Updated: 2025/04/25 17:13:01 by laanikid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+size_t	ft_strlen(const char *str)
 {
-	unsigned char	*c;
+	size_t	i;
 
-	c = (unsigned char *)s;
-	while (n--)
-		*c++ = 0;
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
 }

@@ -1,22 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: laanikid <laanikid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/25 16:46:39 by laanikid          #+#    #+#             */
-/*   Updated: 2025/04/25 16:48:30 by laanikid         ###   ########.fr       */
+/*   Created: 2025/04/25 21:23:43 by laanikid          #+#    #+#             */
+/*   Updated: 2025/04/25 21:24:54 by laanikid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	ft_bzero(void *s, size_t n)
+int	ft_tolower(int ch)
 {
-	unsigned char	*c;
+	unsigned char	uc;
 
-	c = (unsigned char *)s;
-	while (n--)
-		*c++ = 0;
+	uc = (unsigned char)ch;
+	if (uc >= 'A' && uc <= 'Z')
+		return (uc + 32);
+	return (ch);
 }
