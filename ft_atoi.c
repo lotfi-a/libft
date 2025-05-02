@@ -6,12 +6,12 @@
 /*   By: laanikid <laanikid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 13:41:53 by laanikid          #+#    #+#             */
-/*   Updated: 2025/04/26 16:10:34 by laanikid         ###   ########.fr       */
+/*   Updated: 2025/04/27 14:21:24 by laanikid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-int	ft_isspace(int ch)
+static int	ft_isspace(int ch)
 {
 	return ((ch >= 9 && ch <= 13) || ch == 32);
 }

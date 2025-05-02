@@ -6,7 +6,7 @@
 /*   By: laanikid <laanikid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 16:48:05 by laanikid          #+#    #+#             */
-/*   Updated: 2025/04/27 03:25:12 by laanikid         ###   ########.fr       */
+/*   Updated: 2025/04/27 14:09:35 by laanikid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,8 +44,12 @@ char	*ft_strdup(const char *src);
 int		ft_strncmp(const char *s1, const char *s2, size_t count);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strtrim(const char *str, char const *set);
+char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strchr(char const *str, int ch);
+char	*ft_strrchr(char const *str, int ch);
 
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
 #endif
