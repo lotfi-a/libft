@@ -1,21 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: laanikid <laanikid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/25 20:57:22 by laanikid          #+#    #+#             */
-/*   Updated: 2025/05/03 03:19:18 by laanikid         ###   ########.fr       */
+/*   Created: 2025/05/03 02:51:28 by laanikid          #+#    #+#             */
+/*   Updated: 2025/05/03 02:59:44 by laanikid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_toupper(int ch)
+void	ft_striteri(char *str, void (*f)(unsigned int, char *))
 {
-	unsigned char	uc;
+	int	i;
 
-	uc = (unsigned char)ch;
-	if (uc >= 'a' && uc <= 'z')
-		return (uc - 32);
-	return (ch);
+	i = 0;
+	while (str[i])
+	{
+		f((unsigned int)i, &str[i]);
+		i++;
+	}
 }

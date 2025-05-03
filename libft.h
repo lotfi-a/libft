@@ -6,7 +6,7 @@
 /*   By: laanikid <laanikid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 16:48:05 by laanikid          #+#    #+#             */
-/*   Updated: 2025/04/27 14:09:35 by laanikid         ###   ########.fr       */
+/*   Updated: 2025/05/03 03:16:10 by laanikid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,9 +47,17 @@ char	*ft_strtrim(const char *str, char const *set);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strchr(char const *str, int ch);
 char	*ft_strrchr(char const *str, int ch);
+char	*ft_strmapi(char const *str, char (*f)(unsigned int, char));
+void	*ft_striteri(char *str, void (*f)(unsigned int, char *));
+char	*ft_strnstr(const char *big, const char *little, size_t max);
 
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
+
+char	**ft_split(char const *str, char c);
+
+void	*ft_calloc(size_t num, size_t size);
+
 #endif
