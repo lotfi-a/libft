@@ -6,12 +6,10 @@
 /*   By: laanikid <laanikid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/27 02:03:08 by laanikid          #+#    #+#             */
-/*   Updated: 2025/04/27 03:14:02 by laanikid         ###   ########.fr       */
+/*   Updated: 2025/05/03 21:56:46 by laanikid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 static int	is_in_set(const char *ch, char c)
 {
@@ -34,7 +32,7 @@ char	*ft_strtrim(const char *str, const char *set)
 
 	start = 0;
 	start = 0;
-	end = strlen(str) - 1;
+	end = ft_strlen(str) - 1;
 	i = 0;
 	while (str[start] && is_in_set(set, str[start]))
 		start++;
